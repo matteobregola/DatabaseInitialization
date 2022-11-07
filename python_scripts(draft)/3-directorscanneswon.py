@@ -1,13 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov  7 16:05:01 2022
-
-@author: matte
-"""
-
-
-# -*- coding: utf-8 -*-
-"""
 Created on Sat Nov  5 08:37:13 2022
 
 @author: matte

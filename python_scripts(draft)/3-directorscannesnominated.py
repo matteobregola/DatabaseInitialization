@@ -4,8 +4,7 @@ Created on Mon Nov  7 16:01:29 2022
 
 @author: matte
 """
-import time
-import random
+
 import requests
 from bs4 import BeautifulSoup
 
