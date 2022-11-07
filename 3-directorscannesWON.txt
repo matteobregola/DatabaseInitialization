@@ -1,0 +1,39 @@
+INSERT INTO directorawards(director,"year",award,"result")
+SELECT i.*
+FROM (VALUES
+('Pawel Pawlikowski',2018,'Cannes','won'::"awardresult"),
+('Sofia Coppola',2017,'Cannes','won'::"awardresult"),
+('Olivier Assayas',2016,'Cannes','won'::"awardresult"),
+('Cristian Mungiu',2016,'Cannes','won'::"awardresult"),
+('Hsiao-Hsien Hou',2015,'Cannes','won'::"awardresult"),
+('Bennett Miller',2014,'Cannes','won'::"awardresult"),
+('Amat Escalante',2013,'Cannes','won'::"awardresult"),
+('Carlos Reygadas',2012,'Cannes','won'::"awardresult"),
+('Nicolas Winding Refn',2011,'Cannes','won'::"awardresult"),
+('Mathieu Amalric',2010,'Cannes','won'::"awardresult"),
+('Brillante Mendoza',2009,'Cannes','won'::"awardresult"),
+('Nuri Bilge Ceylan',2008,'Cannes','won'::"awardresult"),
+('Julian Schnabel',2007,'Cannes','won'::"awardresult"),
+('Alejandro G. Iñárritu',2006,'Cannes','won'::"awardresult"),
+('Michael Haneke',2005,'Cannes','won'::"awardresult"),
+('Tony Gatlif',2004,'Cannes','won'::"awardresult"),
+('Gus Van Sant',2003,'Cannes','won'::"awardresult"),
+('Paul Thomas Anderson',2002,'Cannes','won'::"awardresult"),
+('Im Kwon-taek',2002,'Cannes','won'::"awardresult"),
+('David Lynch',2001,'Cannes','won'::"awardresult"),
+('Joel Coen',2001,'Cannes','won'::"awardresult"),
+('Edward Yang',2000,'Cannes','won'::"awardresult"),
+('Pedro Almodóvar',1999,'Cannes','won'::"awardresult"),
+('John Boorman',1998,'Cannes','won'::"awardresult"),
+('Kar-Wai Wong',1997,'Cannes','won'::"awardresult"),
+('Joel Coen, Ethan Coen',1996,'Cannes','won'::"awardresult"),
+('Mathieu Kassovitz',1995,'Cannes','won'::"awardresult"),
+('Nanni Moretti',1993,'Cannes','won'::"awardresult"),
+('Mike Leigh',1993,'Cannes','won'::"awardresult"),
+('Robert Altman',1992,'Cannes','won'::"awardresult"),
+('Joel Coen, Ethan Coen',1991,'Cannes','won'::"awardresult"),
+('Pavel Lungin',1990,'Cannes','won'::"awardresult"))i(director,"year",award,"result") 
+ WHERE EXISTS(SELECT FROM directors d  
+ WHERE (d.director)=(i.director) 
+ FOR SHARE)
+ON CONFLICT DO NOTHING;
