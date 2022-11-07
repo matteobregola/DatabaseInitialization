@@ -6,7 +6,7 @@ with values from the data in the data folder.
 
 ## Usage
 
-**Run the query Database_Init.sql in the database or copy the content of Database_Init.txt in the query tool of the editor.**
+<u>**Run the query Database_Init.sql in the database or copy the content of Database_Init.txt in the query tool of the editor.**</u>
 
 
 ## Information about the data
