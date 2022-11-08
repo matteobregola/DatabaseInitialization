@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-
+'''
+This script creates a Query and saves it into queryfile.
+The data is collected from the festival of cannes site that is scraped
+through the BeautifulSoup module
+'''
 import requests
 from bs4 import BeautifulSoup
 
