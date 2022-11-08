@@ -1,31 +1,10 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Nov  5 08:37:13 2022
-
-@author: matte
-"""
-
 import csv
 import random
-
-
-
-
-        
-
+       
 def ExtractWrite(filename="example.csv",queryfile="query.txt", tablename="table", indexes=[0,1]):
     '''
-       queryfile is where i want to store the query   
-       filename is the csv with the data
-       tablename is the name of the table i want to create
-       indexes are the column of the csv file that i want to include
-       in the query
-       QUERY FORMAT:
-            INSERT INTO tablename, VALUES 
-            (data,data,data,...),
-            (data,data,data,...),
-            ...
-            (data,data,data,...);
+    for info see "1-directors.py"
     '''
     
     with open(queryfile, "w") as txt_file:
@@ -126,41 +105,6 @@ def ExtractWrite(filename="example.csv",queryfile="query.txt", tablename="table"
     
     print("Operation sucessfull! You can find the result in: ", queryfile)
     
+
+
 ExtractWrite(queryfile="querymovies.txt",tablename="movies",filename="top1000movies.csv",indexes=[1,4,6,10])
-
-
-
-
-
-
-
-
-
-
-
-def Extract(filename, tablename, indexes):
-    #insert into "tablename" values...
-    print(f'\t INSERT INTO {tablename} VALUES')    
-    with open(filename) as csv_file:
-        csv_reader = csv.reader(csv_file, delimiter=',')
-        line_count = 0
-    
-        for row in csv_reader:
-            
-            if line_count == 1:
-                #print(f'Column names are {", ".join(row)}')
-                print('\n(',end='')
-                for i in indexes:
-                    print(f'{row[i]}', end='' )
-                line_count += 1
-                print('),')
-        
-            else :
-                print(', \n(',end='')
-                for i in indexes:
-                    print(f'{row[i]}', end='' )
-                    if(i!=indexes[-1]):
-                        print(',', end='')
-                print('),')
-                line_count += 1
-        print(';')

@@ -1,30 +1,9 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Nov  5 08:37:13 2022
-
-@author: matte
-"""
-
 import csv
-
-
-
-
-        
 
 def ExtractWrite(filename="example.csv",queryfile="query.txt", tablename="table", indexes=[0,1]):
     '''
-       queryfile is where i want to store the query   
-       filename is the csv with the data
-       tablename is the name of the table i want to create
-       indexes are the column of the csv file that i want to include
-       in the query
-       QUERY FORMAT:
-            INSERT INTO tablename, VALUES 
-            (data,data,data,...),
-            (data,data,data,...),
-            ...
-            (data,data,data,...);
+    for info see "1-directors.py"
     '''
     
     with open(queryfile, "w", encoding="utf-8") as txt_file:

@@ -1,11 +1,11 @@
 import csv
 
 
-        
-
+    
 def ExtractWrite(filename,queryfile, tablename, indexes):
-    
-    
+    '''
+    for info see "1-directors.py"
+    '''
     with open(queryfile, "w", encoding="utf-8") as txt_file:
         
         
