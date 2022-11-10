@@ -4671,3 +4671,4 @@ FROM (VALUES
  WHERE EXISTS(SELECT FROM movies m  
  WHERE (m.title)=(i.title) AND (m.year)=(i.year)  
  FOR SHARE)ON CONFLICT DO NOTHING;
+UPDATE Movies set budget=(budget / 100);
