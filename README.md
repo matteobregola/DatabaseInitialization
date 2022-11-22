@@ -18,3 +18,4 @@ through a python script that uses bs4 and request module.
 There is only one data that is randomized, namely the budget of the films.
 
 
+### It has been added a final version with more data (see final_version)
